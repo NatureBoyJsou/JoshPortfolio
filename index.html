@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zxx">
+   <head>
+      <title>Josh Sourbeer Portfolio </title>
+      <!--meta tags -->
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta
+         name="keywords"
+         content="Dragon Hunt Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+            Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design"
+      />
+      <script>
+         addEventListener("load", function () {
+           setTimeout(hideURLbar, 0);
+         }, false);
+         function hideURLbar() {
+           window.scrollTo(0, 1);
+         }
+      </script>
+      <!--//meta tags ends here-->
+      <!--booststrap-->
+      <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+      <!--//booststrap end-->
+      <!-- font-awesome icons -->
+      <link href="css/fontawesome-all.min.css" rel="stylesheet" type="text/css" media="all" />
+      <!-- //font-awesome icons -->
+      <!-- Nav-CSS -->
+      <link href="css/nav.css" rel="stylesheet" type="text/css" media="all" />
+      <script src="js/modernizr.custom.js"></script>
+      <!-- //Nav-CSS -->
+      <!-- banner -->
+      <link rel="stylesheet" type="text/css" href="css/uncover.css" />
+      <!--//banner -->
+      <!--stylesheets-->
+      <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+      <!--//stylesheets-->
+      <link href="//fonts.googleapis.com/css?family=Cinzel+Decorative:400,700" rel="stylesheet" />
+      <link href="//fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet" />
+      <link href="//fonts.googleapis.com/css?family=Arimo" rel="stylesheet" />
+
+      <!-- Pulse neon glow CSS -->
+      <style>
+        .pulse-glow {
+          color: #0ff;
+          font-weight: bold;
+          font-size: 2rem;
+          text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+          animation: pulse 5s infinite ease-in-out; /* slower pulse */
+        }
+
+        @keyframes pulse {
+          0%, 100% {
+            text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+            opacity: 1;
+          }
+          50% {
+            text-shadow: 0 0 30px #0ff, 0 0 40px #0ff;
+            opacity: 0.7;
+          }
+        }
+
+        /* Cyberpunk flicker glow for second slide */
+        .cyberpunk-glow {
+          color: #ff007f;
+          font-weight: 900;
+          font-size: 2rem;
+          text-shadow:
+            0 0 5px #ff007f,
+            0 0 10px #ff007f,
+            0 0 20px #ff007f,
+            0 0 30px #00fff7,
+            0 0 40px #00fff7,
+            0 0 50px #00fff7,
+            0 0 60px #ff007f;
+          animation: cyberpunkFlicker 5s infinite alternate; /* slower flicker */
+        }
+
+        @keyframes cyberpunkFlicker {
+          0%, 100% {
+            text-shadow:
+              0 0 5px #ff007f,
+              0 0 10px #ff007f,
+              0 0 20px #ff007f,
+              0 0 30px #00fff7,
+              0 0 40px #00fff7,
+              0 0 50px #00fff7,
+              0 0 60px #ff007f;
+            opacity: 1;
+          }
+          50% {
+            text-shadow:
+              0 0 2px #ff007f,
+              0 0 5px #ff007f,
+              0 0 10px #ff007f,
+              0 0 15px #00fff7,
+              0 0 20px #00fff7,
+              0 0 25px #00fff7,
+              0 0 30px #ff007f;
+            opacity: 0.6;
+          }
+        }
+
+        /* Typewriter text below the name */
+        .typewriter-text {
+          font-family: 'Cinzel Decorative', serif;
+          font-weight: bold;
+          font-size: 1.2rem;
+          color: #0ff;
+          text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+          margin-top: 0.5rem;
+          min-height: 1.5rem;
+
+          white-space: nowrap;
+          overflow: visible; /* changed from hidden */
+          border-right: 2px solid #0ff;
+          animation: blinkCursor 0.75s step-end infinite;
+          display: inline-block;
+          max-width: 100%;
+        }
+
+        @keyframes blinkCursor {
+          from, to { border-color: transparent }
+          50% { border-color: #0ff; }
+        }
+      </style>
+   </head>
+   <body>
+      <div class="header-outs" id="home">
+         <div class="header-w3layouts">
+            <div class="container">
+               <div class="right-side">
+                  <p>
+                     <button id="trigger-overlay" type="button">
+                       <span class="fa fa-bars" aria-hidden="true"></span>
+                     </button>
+                  </p>
+               </div>
+               <!-- open/close -->
+               <div class="overlay overlay-hugeinc">
+                  <button type="button" class="overlay-close">Close</button>
+                  <nav>
+                     <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                        <li><a href="history.html">Coursework</a></li>
+                        <li><a href="gallery.html">Projects</a></li>
+                        <li><a href="contact.html">Links & Readings</a></li>
+                     </ul>
+                  </nav>
+               </div>
+               <div class="hedder-logo">
+                  <h1>
+          
+                    </a>
+                  </h1>
+               </div>
+               <!-- /open/close -->
+            </div>
+            <div class="clearfix"> </div>
+         </div>
+
+         <!--banner-->
+         <div class="slides text-center">
+            <div class="slide slide--current one-img ">
+               <div class="slider-up">
+                  <h4 class="pulse-glow">JS</h4>
+                  <h5 class="pulse-glow">Josh Sourbeer</h5>
+                  <div class="typewriter-text"></div>
+                  <div class="outs_more-buttn"></div>
+               </div>
+               <div class="slide__img"></div>
+            </div>
+            <div class="slide two-img">
+               <div class="slider-up">
+                  <h4 class="cyberpunk-glow">JS</h4>
+                  <h5 class="cyberpunk-glow">Josh Sourbeer</h5>
+                  <div class="typewriter-text"></div>
+                  <div class="outs_more-buttn"></div>
+               </div>
+               <div class="slide__img"></div>
+            </div>
+            <div class="slide three-img">
+               <div class="slider-up">
+                  <h4 class="pulse-glow">JS</h4>
+                  <h5 class="pulse-glow">Josh Sourbeer</h5>
+                  <div class="typewriter-text"></div>
+                  <div class="outs_more-buttn"></div>
+               </div>
+               <div class="slide__img"></div>
+            </div>
+            <div class="slide four-img">
+               <div class="slider-up">
+                  <h4 class="pulse-glow">JS</h4>
+                  <h5 class="pulse-glow">Josh Sourbeer</h5>
+                  <div class="typewriter-text"></div>
+                  <div class="outs_more-buttn"></div>
+               </div>
+               <div class="slide__img"></div>
+            </div>
+            <div class="slide five-img">
+               <div class="slider-up">
+                  <h4 class="pulse-glow">JS</h4>
+                  <h5 class="pulse-glow">Josh Sourbeer</h5>
+                  <div class="typewriter-text"></div>
+                  <div class="outs_more-buttn"></div>
+               </div>
+               <div class="slide__img"></div>
+            </div>
+            <div class="slide six-img">
+               <div class="slider-up">
+                  <h4 class="pulse-glow">JS</h4>
+                  <h5 class="pulse-glow">Josh Sourbeer</h5>
+                  <div class="typewriter-text"></div>
+                  <div class="outs_more-buttn"></div>
+               </div>
+               <div class="slide__img"></div>
+            </div>
+            <div class="clearfix"></div>
+         </div>
+
+              
+
+         <div class="clearfix"></div>
+         
+
+
+      </div>
+
+     
+
+    <footer class="py-2">
+  <div class="pagination-wrapper text-center">
+    <ul class="pagination">
+      <li><span class="pagination__item"></span></li>
+      <li><span class="pagination__item"></span></li>
+      <li><span class="pagination__item"></span></li>
+      <li><span class="pagination__item"></span></li>
+      <li><span class="pagination__item"></span></li>
+      <li><span class="pagination__item"></span></li>
+    </ul>
+  </div>
+
+<div class="icons text-center py-md-3 pb-2" style="margin-left: 12px;">
+  <ul>
+    <li><a href="#"><span class="fab fa-github"></span></a></li>
+    <li><a href="#"><span class="fas fa-envelope"></span></a></li>
+    <li><a href="#"><span class="fas fa-file"></span></a></li>
+  </ul>
+</div>
+
+
+  <div class="footer-below text-center">
+    <p></p>
+  </div>
+</footer>
+
+
+      <!-- js working-->
+      <script src="js/jquery-2.2.3.min.js"></script>
+      <!--//js working-->
+      <!-- For-Banner -->
+      <script src="js/imagesloaded.pkgd.min.js"></script>
+      <script src="js/anime.min.js"></script>
+      <script src="js/uncover.js"></script>
+      <script src="js/demo1.js"></script>
+      <!-- //For-Banner -->
+      <!--nav menu-->
+      <script src="js/classie.js"></script>
+      <script src="js/demonav.js"></script>
+      <!-- //nav menu-->
+      <!-- bootstrap working-->
+      <script src="js/bootstrap.min.js"></script>
+      <!-- // bootstrap working-->
+
+      <script>
+        const slides = document.querySelectorAll('.slide');
+        const typewriterTextEls = document.querySelectorAll('.typewriter-text');
+
+        // Placeholder texts for each slide index (0-based)
+        const texts = [
+          "Portfolio",
+          "DOD Simulations Officer",
+          "Web Developer (JS, HTML, CSS)",
+          "Independent Game Developer",
+          "Unreal Engine & Unity",
+          "Cybersecurity & Network Technician"
+        ];
+
+        let currentSlide = 0;
+        let typingIndex = 0;
+        let typingInterval;
+
+        function typeWriter(text, element) {
+          clearInterval(typingInterval);
+          element.textContent = '';
+          typingIndex = 0;
+
+          typingInterval = setInterval(() => {
+            if (typingIndex < text.length) {
+              element.textContent += text.charAt(typingIndex);
+              typingIndex++;
+            } else {
+              clearInterval(typingInterval);
+            }
+          }, 80); // typing speed in ms
+        }
+
+        function showOnlyCurrentTypewriter(idx) {
+          typewriterTextEls.forEach((el, i) => {
+            if (i === idx) {
+              el.style.display = 'inline-block';  // or 'block' as needed
+            } else {
+              el.style.display = 'none';
+              el.textContent = '';  // clear old text when hidden
+            }
+          });
+        }
+
+        function checkSlide() {
+          slides.forEach((slide, idx) => {
+            if (slide.classList.contains('slide--current')) {
+              if (currentSlide !== idx) {
+                currentSlide = idx;
+                showOnlyCurrentTypewriter(currentSlide);
+                typeWriter(texts[currentSlide], typewriterTextEls[currentSlide]);
+              }
+            }
+          });
+        }
+
+        // Initialize with first slide's text
+        showOnlyCurrentTypewriter(0);
+        typeWriter(texts[0], typewriterTextEls[0]);
+
+        // Run check every 500ms
+        setInterval(checkSlide, 500);
+      </script>
+
+      
+   </body>
+</html>

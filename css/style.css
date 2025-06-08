@@ -210,14 +210,13 @@ footer {
   left: 0;
   opacity: 0;
   display: flex;
-  /*justify-content:left;*/
-  /*align-items:left;*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   -ms-background-size: cover;
-  min-height: 800px;
+  min-height: 700px; /* was 800px – reduced by 40px */
 }
+
 
 .slide--current {
   opacity: 1;
@@ -261,9 +260,6 @@ footer {
   background: #fff;
 }
 
-.pagination__item--current {
-  /*color: var(--color-link);*/
-}
 
 .slider-up {
   z-index: 999;

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Uniform Video Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #222;
+      color: #fff;
+      margin: 0;
+      padding: 2rem;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    /* Container with grid to keep all boxes equal size */
+.gallery-grids figure {
+  height: 300px; /* or whatever fits your layout */
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery-grids video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+    .gallery-item {
+      position: relative;
+      width: 320px;
+      height: 180px; /* fixed 16:9 aspect */
+      overflow: hidden;
+      border-radius: 8px;
+      background: #000;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    }
+    .gallery-item video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .gallery-item:hover video {
+      transform: scale(1.05);
+    }
+    .overlay {
+      position: absolute;
+      inset: 0; /* shorthand for top:0; right:0; bottom:0; left:0; */
+      background: rgba(0,0,0,0.6);
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: opacity 0.3s ease;
+      padding: 1rem;
+    }
+    .gallery-item:hover .overlay {
+      opacity: 1;
+    }
+    .overlay span {
+      font-weight: normal;
+      font-size: 0.9rem;
+      margin-top: 0.3rem;
+      color: #ddd;
+    }
+
+    /* Modal styles */
+    .modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.9);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 10000;
+      padding: 1rem;
+    }
+    .modal.active {
+      display: flex;
+    }
+    .modal-content {
+      position: relative;
+      max-width: 90vw;
+      max-height: 80vh;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #000;
+      box-shadow: 0 0 20px rgba(255,255,255,0.2);
+    }
+    .modal video {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    .modal-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(255,255,255,0.2);
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      padding: 0 10px;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+    .modal-close:hover {
+      background: rgba(255,255,255,0.5);
+    }
+  </style>
+</head>
+<body>
+  <h1>Coursework Video Gallery</h1>
+  <div class="gallery">
+    <div class="gallery-item" data-video="videos/savor.mp4">
+      <video src="videos/savor-thumbnail.mp4" muted loop playsinline></video>
+      <div class="overlay">Savor<br /><span>Website</span></div>
+    </div>
+    <div class="gallery-item" data-video="videos/dragonhunt.mp4">
+      <video src="videos/dragonhunt-thumbnail.mp4" muted loop playsinline></video>
+      <div class="overlay">Dragon<br /><span>Hunt</span></div>
+    </div>
+    <div class="gallery-item" data-video="videos/project3.mp4">
+      <video src="videos/project3-thumbnail.mp4" muted loop playsinline></video>
+      <div class="overlay">Project Three<br /><span>Demo</span></div>
+    </div>
+    <div class="gallery-item" data-video="videos/project4.mp4">
+      <video src="videos/project4-thumbnail.mp4" muted loop playsinline></video>
+      <div class="overlay">Project Four<br /><span>Demo</span></div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <video id="modal-video" controls autoplay></video>
+    </div>
+  </div>
+
+  <script>
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const modal = document.getElementById('modal');
+    const modalVideo = document.getElementById('modal-video');
+    const modalClose = document.getElementById('modal-close');
+
+    galleryItems.forEach(item => {
+      const videoEl = item.querySelector('video');
+      videoEl.play(); // autoplay muted thumbnails
+
+      item.addEventListener('click', () => {
+        const videoSrc = item.getAttribute('data-video');
+        modalVideo.src = videoSrc;
+        modal.classList.add('active');
+        modalVideo.play();
+      });
+    });
+
+    modalClose.addEventListener('click', () => {
+      modalVideo.pause();
+      modalVideo.src = "";
+      modal.classList.remove('active');
+    });
+
+    modal.addEventListener('click', (e) => {
+      if(e.target === modal){
+        modalVideo.pause();
+        modalVideo.src = "";
+        modal.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>

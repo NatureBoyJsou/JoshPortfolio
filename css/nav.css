@@ -1,0 +1,147 @@
+/* OVERLAY EFFECTS */
+
+/* Overlay style */
+.overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, .98);
+}
+
+/* Overlay closing cross */
+.overlay .overlay-close {
+	width: 26px;
+	height: 26px;
+	position: absolute;
+	right: 32px;
+	top: 32px;
+	overflow: hidden;
+	border: none;
+	background: url(../images/cross.png) no-repeat center center;
+	text-indent: 200%;
+	color: transparent;
+	outline: none;
+	z-index: 100;
+	cursor: pointer;
+}
+
+/* Menu style */
+.overlay nav {
+	text-align: center;
+	position: relative;
+	top: 50%;
+	height: 60%;
+	font-size: 54px;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.overlay ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	display: inline-block;
+	height: 100%;
+	position: relative;
+}
+
+.overlay ul li {
+	display: block;
+	height: 20%;
+	height: calc(80% / 5);
+	min-height: 54px;
+}
+
+/* Updated nav links with glowing font */
+.overlay ul li a {
+    font-family: 'Cinzel Decorative', serif;  /* same font as glowing slide text */
+    font-weight: bold;
+    font-size: 2rem;                         /* adjust size if needed */
+    color: #0ff;                            /* neon cyan color */
+    text-shadow:
+      0 0 10px #0ff,
+      0 0 20px #0ff;
+    animation: pulse 5s infinite ease-in-out;
+    display: block;
+    transition: color 0.2s;
+}
+
+.overlay ul li a:hover,
+.overlay ul li a:focus {
+    color: #7c88ff;                         /* hover color */
+    text-shadow:
+      0 0 15px #7c88ff,
+      0 0 30px #7c88ff;
+}
+
+/* Effects */
+.overlay-hugeinc {
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+	transition: opacity 0.5s, visibility 0s 0.5s;
+}
+
+.overlay-hugeinc.open {
+	opacity: 1;
+	visibility: visible;
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+	z-index: 999;
+}
+
+.overlay-hugeinc nav {
+	-webkit-perspective: 1200px;
+	perspective: 1200px;
+}
+
+.overlay-hugeinc nav ul {
+	opacity: 0.4;
+	-webkit-transform: translateY(-25%) rotateX(35deg);
+	transform: translateY(-25%) rotateX(35deg);
+	-webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+	transition: transform 0.5s, opacity 0.5s;
+}
+
+.overlay-hugeinc.open nav ul {
+	opacity: 1;
+	-webkit-transform: rotateX(0deg);
+	transform: rotateX(0deg);
+}
+
+.overlay-hugeinc.close nav ul {
+	-webkit-transform: translateY(25%) rotateX(-35deg);
+	transform: translateY(25%) rotateX(-35deg);
+}
+
+@media screen and (max-height: 30.5em) {
+	.overlay nav {
+		height: 70%;
+		font-size: 34px;
+	}
+	.overlay ul li {
+		min-height: 34px;
+	}
+}
+
+@media (max-width: 1050px) {
+	.overlay ul li {
+		height: calc(74% / 5);
+	}
+}
+
+/* Pulse animation keyframes */
+@keyframes pulse {
+	0%, 100% {
+		text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+		opacity: 1;
+	}
+	50% {
+		text-shadow: 0 0 30px #0ff, 0 0 40px #0ff;
+		opacity: 0.7;
+	}
+}
+
+/* //OVERLAY EFFECTS */

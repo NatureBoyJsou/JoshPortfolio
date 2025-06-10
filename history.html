@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zxx">
    <head>
-      <title>Portfolio | Experience </title>
+      <title>Coursework </title>
       <!--meta tags -->
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,27 +9,46 @@
          addEventListener("load", function () {
             setTimeout(hideURLbar, 0);
          }, false);
-
          function hideURLbar() {
             window.scrollTo(0, 1);
          }
       </script>
-      <!--//meta tags ends here-->
       <!--bootstrap-->
       <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
       <!-- font-awesome icons -->
       <link href="css/fontawesome-all.min.css" rel="stylesheet" type="text/css" media="all">
       <!--stylesheets-->
       <link href="css/style.css" rel='stylesheet' type='text/css' media="all">
-      <!-- Nav-CSS -->   
       <link href="css/nav.css" rel="stylesheet" type="text/css" media="all" />
-      <script src="js/modernizr.custom.js"></script>
-      <!-- Timeline -->
       <link href="css/timeline.min.css" rel="stylesheet">
       <!-- Fonts -->
       <link href="//fonts.googleapis.com/css?family=Cinzel+Decorative:400,700" rel="stylesheet">
       <link href="//fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
       <link href="//fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
+      <style>
+         h3.title {
+            font-family: 'Cinzel Decorative', cursive;
+         }
+         #trigger-overlay {
+      position: relative;
+      z-index: 10000;
+    }
+   .overlay-hugeinc {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.8);
+    }
+    .timeline__wrap {
+      position: relative;
+      z-index: 1;
+    }
+   
+
+      </style>
    </head>
    <body>
       <!--header-->
@@ -43,7 +62,6 @@
                      </button>
                   </p>
                </div>
-               <!-- open/close -->
                <div class="overlay overlay-hugeinc">
                   <button type="button" class="overlay-close">Close</button>
                   <nav>
@@ -56,15 +74,14 @@
                      </ul>
                   </nav>
                </div>
-               <div class="hedder-logo">
-                
-               </div>
+               <div class="hedder-logo"></div>
             </div>
             <div class="clearfix"> </div>
          </div>
       </div>
       <!-- banner -->
       <div class="inner_page-banner"></div>
+
       <!-- Timeline Section -->
       <section class="latest-design py-lg-4 py-md-3 py-sm-3 py-3">
          <div class="container-fluid py-lg-5 py-md-5 py-sm-4 py-4">
@@ -72,6 +89,7 @@
             <div class="timeline">
                <div class="timeline__wrap">
                   <div class="timeline__items">
+
                      <div class="timeline__item">
                         <div class="timeline__content">
                            <h6 class="pb-2">Fall 2024</h6>
@@ -79,6 +97,7 @@
                            <p>Foundational Core Class Focusing on Simulation Dynamics, Continous, Discrete, Stochastic</p>
                         </div>
                      </div>
+
                      <div class="timeline__item">
                         <div class="timeline__content">
                            <h6 class="pb-2">Fall 2024</h6>
@@ -86,6 +105,7 @@
                            <p>Introduction to Programming, Lots of Work With Java Script, and Virtual Reality</p>
                         </div>
                      </div>
+
                      <div class="timeline__item">
                         <div class="timeline__content">
                            <h6 class="pb-2">Fall 2024</h6>
@@ -93,6 +113,7 @@
                            <p>Introduction to Math for M/S, Lots of Python Programming</p>
                         </div>
                      </div>
+
                      <div class="timeline__item">
                         <div class="timeline__content">
                            <h6 class="pb-2">Spring 2025</h6>
@@ -100,13 +121,15 @@
                            <p>Advanced Math for M/S, Extended Python Programming</p>
                         </div>
                      </div>
+
                      <div class="timeline__item">
                         <div class="timeline__content">
                            <h6 class="pb-2">Spring 2025</h6>
                            <h4 class="pb-3">Understanding Humans for M/S</h4>
-                           <p>Pyschological Aspects of Understanding Humans & AI</p>
+                           <p>Psychological Aspects of Understanding Humans & AI</p>
                         </div>
                      </div>
+
                      <div class="timeline__item">
                         <div class="timeline__content">
                            <h6 class="pb-2">Spring 2025</h6>
@@ -114,66 +137,70 @@
                            <p>Semester Long Course Focusing on Alternate Reality Game Development</p>
                         </div>
                      </div>
+
                      <div class="timeline__item">
                         <div class="timeline__content">
                            <h6 class="pb-2">Summer 2025</h6>
                            <h4 class="pb-3">Behavioral Aspects of Cybersecurity</h4>
-                           <p>Mult-Faceted Course Focusing on Human Behavioral Motivations and Elements Involving Cyber Crime</p>
+                           <p>Multifaceted Course Focusing on Human Behavioral Motivations and Elements Involving Cyber Crime</p>
                         </div>
                      </div>
+
+                     <!-- Duplicate bubble at far right -->
                      <div class="timeline__item">
                         <div class="timeline__content">
                            <h6 class="pb-2">Summer 2025</h6>
                            <h4 class="pb-3">Multimedia for Education and Training</h4>
-                           <p>Graduate-level coursework about traditional and emerging audiovisual media for various instructional settings and purposes</p>
+                           <p>Graduate-level coursework about traditional and emerging audiovisual media for instructional settings and purposes</p>
                         </div>
                      </div>
+
                   </div>
                </div>
             </div>
          </div>
       </section>
+
       <!-- Footer -->   
       <footer class="py-2">
-         <div class="icons text-center py-md-3 pb-2">
-            <ul>
-               <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
-               <li><a href="#"><span class="fas fa-envelope"></span></a></li>
-               <li><a href="#"><span class="fas fa-rss"></span></a></li>
-               <li><a href="#"><span class="fab fa-vk"></span></a></li>
-            </ul>
-         </div>
-         <div class="footer-below text-center">
-     
-         </div>
+         <div class="icons text-center py-md-3 pb-2" style="margin-left: 12px;">
+  <ul>
+    <li>
+      <a href="https://github.com/NatureBoyJsou" target="_blank" rel="noopener noreferrer" title="View My GitHub Profile">
+        <span class="fab fa-github"></span>
+      </a>
+    </li>
+    <li>
+      <a href="mailto:premiumant56@gmail.com" title="Send Me an Email">
+        <span class="fas fa-envelope"></span>
+      </a>
+    </li>
+    <li>
+      <a href="images/resume.pdf" download title="Download My Resume">
+        <span class="fas fa-file"></span>
+      </a>
+    </li>
+  </ul>
+</div>
+         <div class="footer-below text-center"></div>
       </footer>
+
       <!-- Scripts -->
       <script src='js/jquery-2.2.3.min.js'></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
       <script src="js/classie.js"></script>
       <script src="js/demonav.js"></script>
       <script src="js/timeline.min.js"></script>
       <script src="js/bootstrap.min.js"></script>
-      <!-- Timeline Init & Scroll Reset -->
+
+      <!-- Timeline Init -->
       <script>
          timeline(document.querySelectorAll('.timeline'), {
             forceVerticalMode: 700,
             mode: 'horizontal',
             verticalStartPosition: 'left',
             visibleItems: 4
-         });
-
-         // Reset timeline scroll to beginning when last item is clicked
-         document.addEventListener("DOMContentLoaded", function () {
-            const timelineWrap = document.querySelector('.timeline__wrap');
-            const items = document.querySelectorAll('.timeline__item');
-            const lastItem = items[items.length - 1];
-
-            lastItem.addEventListener('click', function () {
-               timelineWrap.scrollTo({
-                  left: 0,
-                  behavior: 'smooth'
-               });
-            });
          });
       </script>
    </body>

@@ -1,169 +1,360 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-   <title>Josh Sourbeer Portfolio | Projects</title>
-   <!--meta tags -->
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <meta name="keywords" content="Dragon Hunt Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-   <script>
-      addEventListener("load", function () {
-         setTimeout(hideURLbar, 0);
-      }, false);
-      function hideURLbar() {
-         window.scrollTo(0, 1);
-      }
-   </script>
-   <!-- Bootstrap -->
-   <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
-   <!-- Font Awesome -->
-   <link href="css/fontawesome-all.min.css" rel="stylesheet" type="text/css" media="all">
-   <!-- Stylesheets -->
-   <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
-   <!-- Lightbox -->
-   <link rel="stylesheet" href="css/lightbox.css">
-   <!-- Navigation -->
-   <link href="css/nav.css" rel="stylesheet" type="text/css" media="all" />
-   <script src="js/modernizr.custom.js"></script>
-   <!-- Fonts -->
-   <link href="//fonts.googleapis.com/css?family=Cinzel+Decorative:400,700" rel="stylesheet">
-   <link href="//fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
-   <link href="//fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
+  <title>Josh Sourbeer Portfolio | Projects</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="Dragon Hunt Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+  
+  <script>
+    addEventListener("load", function () {
+      setTimeout(hideURLbar, 0);
+    }, false);
+    function hideURLbar() {
+      window.scrollTo(0, 1);
+    }
+  </script>
 
-   <style>
-      /* Uniform figure height for consistent layout */
-      .gallery-grids figure {
-         height: 300px;
-         overflow: hidden;
-         position: relative;
-      }
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="css/fontawesome-all.min.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+  <link rel="stylesheet" href="css/lightbox.css" />
+  <link href="css/nav.css" rel="stylesheet" type="text/css" media="all" />
+  <script src="js/modernizr.custom.js"></script>
 
-      .gallery-grids video {
-         width: 100%;
-         height: 100%;
-         object-fit: cover;
-         display: block;
-         position: absolute;
-         top: 0;
-         left: 0;
-      }
-   </style>
+  <link href="//fonts.googleapis.com/css?family=Cinzel+Decorative:400,700" rel="stylesheet" />
+  <link href="//fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet" />
+  <link href="//fonts.googleapis.com/css?family=Arimo" rel="stylesheet" />
+
+  <style>
+    .gallery-grids figcaption h3 {
+      color: #fff;
+      text-shadow: 0 0 5px #fff, 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
+    }
+    .gallery-grids figcaption h3 span {
+      color: #ccc;
+      text-shadow: 0 0 3px #ccc, 0 0 6px #0ff, 0 0 12px #0ff;
+    }
+    .gallery-grids figcaption p {
+      color: #eee;
+      font-size: 1rem;
+      text-shadow: 0 0 2px #fff, 0 0 6px #0ff, 0 0 10px #0ff;
+    }
+    #videoModal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    /* Audio Modal styles */
+    #audioModal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 1100;
+    }
+    #audioModal > div {
+      background: #222;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+    }
+    #closeAudioBtn {
+      margin-top: 10px;
+      padding: 6px 12px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-   <!-- Header -->
-   <div class="header-outs">
-      <div class="header-w3layouts">
-         <div class="container">
-            <div class="right-side">
-               <p>
-                  <button id="trigger-overlay" type="button">
-                     <span class="fa fa-bars" aria-hidden="true"></span>
-                  </button>
-               </p>
-            </div>
-            <!-- Navigation Overlay -->
-            <div class="overlay overlay-hugeinc">
-               <button type="button" class="overlay-close">Close</button>
-               <nav>
-                  <ul>
-                     <li><a href="index.html">Home</a></li>
-                     <li><a href="about.html">About Me</a></li>
-                     <li><a href="history.html">Coursework</a></li>
-                     <li><a href="gallery.html">Projects</a></li>
-                     <li><a href="contact.html">Links & Readings</a></li>
-                  </ul>
-               </nav>
-            </div>
-            <div class="hedder-logo">
-               <h1><a href="index.html">
-                  <img src="images/logo.png" class="img-fluid" alt="Responsive image">DH</a>
-               </h1>
-            </div>
-         </div>
-         <div class="clearfix"> </div>
-      </div>
-   </div>
 
-   <!-- Banner -->
-   <div class="inner_page-banner"></div>
-
-   <!-- Coursework Section -->
-   <section class="gallery-design py-lg-4 py-md-3 py-sm-3 py-3">
-      <div class="container py-lg-5 py-md-5 py-sm-4 py-4">
-         <h3 class="title text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">Coursework</h3>
-         <div class="row grid gallery-info">
-            <div class="col-lg-6 col-md-6 col-sm-12 gallery-grids p-0">
-               <figure class="effect-marley gap-gap">
-                  <video class="img-fluid" autoplay muted loop playsinline>
-                     <source src="images/SavorPromo.webm" type="video/mp4">
-                     Your browser does not support the video tag.
-                  </video>
-                  <figcaption>
-                     <h3>Dragon<span>Hunt</span></h3>
-                     <p>Lorem ipsum dolor sit amet, consectetur</p>
-                     <a href="videos/g3.mp4" class="gallery-box" data-lightbox="example-set"></a>
-                  </figcaption>
-               </figure>
-               <figure class="effect-marley gap-gap">
-                  <video class="img-fluid" autoplay muted loop playsinline>
-                     <source src="images/Sailing.mp4" type="video/webm">
-                     Your browser does not support the video tag.
-                  </video>
-                  <figcaption>
-                     <h3>Dragon<span>Hunt</span></h3>
-                     <p>Lorem ipsum dolor sit amet, consectetur</p>
-                     <a href="videos/g4.mp4" class="gallery-box" data-lightbox="example-set"></a>
-                  </figcaption>
-               </figure>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 gallery-grids p-0">
-               <figure class="effect-marley gap-gap">
-                  <video class="img-fluid" autoplay muted loop playsinline>
-                     <source src="images/Burgers480.webm" type="video/mp4">
-                     Your browser does not support the video tag.
-                  </video>
-                  <figcaption>
-                     <h3>Dragon<span>Hunt</span></h3>
-                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
-                     <a href="videos/g5.mp4" class="gallery-box" data-lightbox="example-set"></a>
-                  </figcaption>
-               </figure>
-               <figure class="effect-marley gap-gap">
-                  <video class="img-fluid" autoplay muted loop playsinline>
-                     <source src="images/Burgers480.webm" type="video/mp4">
-                     Your browser does not support the video tag.
-                  </video>
-                  <figcaption>
-                     <h3>Dragon<span>Hunt</span></h3>
-                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
-                     <a href="videos/g6.mp4" class="gallery-box" data-lightbox="example-set"></a>
-                  </figcaption>
-               </figure>
-            </div>
-         </div>
+  <!-- Navigation -->
+  <div class="header-outs">
+    <div class="header-w3layouts">
+      <div class="container">
+        <div class="right-side">
+          <p>
+            <button id="trigger-overlay" type="button">
+              <span class="fa fa-bars" aria-hidden="true"></span>
+            </button>
+          </p>
+        </div>
+        <div class="overlay overlay-hugeinc">
+          <button type="button" class="overlay-close">Close</button>
+          <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Me</a></li>
+              <li><a href="history.html">Coursework</a></li>
+              <li><a href="gallery.html">Projects</a></li>
+              <li><a href="contact.html">Links & Readings</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
-   </section>
+    </div>
+  </div>
 
-   <!-- Footer -->
-   <footer class="py-2">
-      <div class="icons text-center py-md-3 pb-2">
-         <ul>
-            <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
-            <li><a href="#"><span class="fas fa-envelope"></span></a></li>
-            <li><a href="#"><span class="fas fa-rss"></span></a></li>
-            <li><a href="#"><span class="fab fa-vk"></span></a></li>
-         </ul>
-      </div>
-      <div class="footer-below text-center">
-         <p>©2018 Dragon Hunt. All Rights Reserved.</p>
-      </div>
-   </footer>
+  <div class="inner_page-banner"></div>
 
-   <!-- Scripts -->
-   <script src="js/jquery-2.2.3.min.js"></script>
-   <script src="js/classie.js"></script>
-   <script src="js/demonav.js"></script>
-   <script src="js/lightbox-plus-jquery.min.js"></script>
-   <script src="js/bootstrap.min.js"></script>
+  <!-- Projects Section -->
+  <section class="gallery-design py-lg-4 py-md-3 py-sm-3 py-3">
+    <div class="container py-lg-5 py-md-5 py-sm-4 py-4">
+      <h3 class="title text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3" style="font-family: 'Cinzel Decorative', cursive;">Projects</h3>
+
+      <div class="row grid gallery-info">
+
+        <!-- Column 1 -->
+        <div class="col-lg-6 col-md-6 col-sm-12 gallery-grids p-0">
+          <figure class="effect-marley gap-gap">
+            <video class="img-fluid" autoplay muted loop playsinline>
+              <source src="images/SavorPromo.mp4" type="video/mp4" />
+            </video>
+            <figcaption>
+              <h3>Savor<span>Website</span></h3>
+              <p>A Collection of Recipes and Cooking Resources, Built Using React JSX & CSS</p>
+              <a href="https://natureboyjsou.github.io/SavorRecipesTutorials/" target="_blank" rel="noopener noreferrer">Visit Site</a>
+            </figcaption>
+          </figure>
+
+          <figure class="effect-marley gap-gap">
+            <video class="img-fluid" autoplay muted loop playsinline>
+              <source src="images/Sailing.mp4" type="video/webm" />
+            </video>
+      <figcaption>
+      <h3>Water Simulation<span>Projects</span></h3>
+       <p>Simulated Ocean Scene Created Unreal Engine 5 Blueprints</p>
+     <a href="images/Sailing.mp4" onclick="openVideoModal('images/Sailing.mp4'); return false;">Watch Video</a>
+    </figcaption>
+
+          </figure>
+
+          <figure class="effect-marley gap-gap">
+            <video class="img-fluid" autoplay muted loop playsinline>
+              <source src="images/Pathfinding.mp4" type="video/mp4" />
+            </video>
+            <figcaption>
+              <h3>MilitarySimulation<span>Projects</span></h3>
+              <p>Comparison 2D Project Built in Unity Using C# & A* Pathfinding Algorithms</p>
+              <a href="videos/g7.mp4" class="gallery-box" data-lightbox="example-set"></a>
+            </figcaption>
+          </figure>
+
+          <figure class="effect-marley gap-gap">
+            <video class="img-fluid" autoplay muted loop playsinline>
+              <source src="images/DracoTerminal.mp4" type="video/mp4" />
+            </video>
+            <figcaption>
+              <h3>FindAlex<span>ARG</span></h3>
+              <p>Lead Programmer for Find Alex, An Alternate Reality Online Mystery Game Created Using React, Tailwind and HTML</p>
+              <a href="videos/g8.mp4" class="gallery-box" data-lightbox="example-set"></a>
+            </figcaption>
+          </figure>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="col-lg-6 col-md-6 col-sm-12 gallery-grids p-0">
+          <figure class="effect-marley gap-gap">
+            <video class="img-fluid" autoplay muted loop playsinline>
+              <source src="images/Burgers.mp4" type="video/mp4" />
+            </video>
+            <figcaption>
+              <h3>Burger Cooking<span>Tutorial</span></h3>
+              <p>An Interactive Graphic Media Layout Project Created Using PowerPoint</p>
+              <a href="#" onclick="openVideoModal('images/Burgers480.webm'); return false;">Watch Video</a>
+            </figcaption>
+          </figure>
+
+          <figure class="effect-marley gap-gap">
+            <video class="img-fluid" autoplay muted loop playsinline>
+              <source src="images/AudioProject.mp4" type="video/mp4" />
+            </video>
+            <figcaption>
+              <h3>Pasta Cooking<span>Tutorial</span></h3>
+              <p>An Edited Audio Presentation Detailing How to Make Home Made Pasta</p>
+              <!-- Changed from video link to audio player trigger -->
+              <a href="#" onclick="openAudioModal('images/PastaTutorialAudio.mp3'); return false;">Play Audio</a>
+            </figcaption>
+          </figure>
+
+          <figure class="effect-marley gap-gap">
+            <video class="img-fluid" autoplay muted loop playsinline>
+              <source src="images/SchwarzwaldPromo.mp4" type="video/mp4" />
+            </video>
+            <figcaption>
+              <h3>Fortress Of<span>Schwarzwald</span></h3>
+              <p>An Upcoming 3D Tabletop RPG Coded in Unreal Engine 5 Using Blueprints</p>
+              <a href="videos/g9.mp4" class="gallery-box" data-lightbox="example-set"></a>
+            </figcaption>
+          </figure>
+
+          <figure class="effect-marley gap-gap">
+            <video class="img-fluid" autoplay muted loop playsinline>
+              <source src="images/App.mp4" type="video/mp4" />
+            </video>
+            <figcaption>
+              <h3>Protein Intake<span>Calculator</span></h3>
+              <p>A Fitness Tracking Mobile Application Created Using MS Power Apps</p>
+              <a href="videos/g10.mp4" class="gallery-box" data-lightbox="example-set"></a>
+            </figcaption>
+          </figure>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-2">
+    <div class="icons text-center py-md-3 pb-2" style="margin-left: 12px;">
+  <ul>
+    <li>
+      <a href="https://github.com/NatureBoyJsou" target="_blank" rel="noopener noreferrer" title="View My GitHub Profile">
+        <span class="fab fa-github"></span>
+      </a>
+    </li>
+    <li>
+      <a href="mailto:premiumant56@gmail.com" title="Send Me an Email">
+        <span class="fas fa-envelope"></span>
+      </a>
+    </li>
+    <li>
+      <a href="images/resume.pdf" download title="Download My Resume">
+        <span class="fas fa-file"></span>
+      </a>
+    </li>
+  </ul>
+</div>
+    <div class="footer-below text-center"></div>
+  </footer>
+
+  <!-- Modal Video Player -->
+  <div id="videoModal">
+    <video id="videoPlayer" controls style="max-width:90%; max-height:80%;">
+      <source src="" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <button id="closeModalBtn" style="position:absolute; top:20px; right:20px; font-size:2rem; color:white; background:none; border:none;">&times;</button>
+  </div>
+
+  <!-- Modal Audio Player -->
+  <div id="audioModal">
+    <div>
+      <audio id="audioPlayer" controls style="width: 100%;">
+        <source src="" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+      <br />
+      <button id="closeAudioBtn">Close</button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/jquery-2.2.3.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/lightbox-plus-jquery.min.js"></script>
+  <script src="js/move-top.js"></script>
+  <script src="js/easing.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/SmoothScroll.min.js"></script>
+   <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const trigger = document.getElementById('trigger-overlay');
+      const overlay = document.querySelector('.overlay');
+      const closeBtn = document.querySelector('.overlay-close');
+
+      // Open overlay
+      trigger.addEventListener('click', () => {
+        overlay.classList.add('open');
+        overlay.setAttribute('aria-hidden', 'false');
+      });
+
+      // Close overlay
+      closeBtn.addEventListener('click', () => {
+        overlay.classList.remove('open');
+        overlay.setAttribute('aria-hidden', 'true');
+      });
+
+      // Optional: Close overlay when clicking outside nav (on overlay background)
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+          overlay.classList.remove('open');
+          overlay.setAttribute('aria-hidden', 'true');
+        }
+      });
+    });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const modal = document.getElementById('videoModal');
+      const video = document.getElementById('videoPlayer');
+      const closeBtn = document.getElementById('closeModalBtn');
+
+      function openVideoModal(videoSrc) {
+        video.src = videoSrc;
+        modal.style.display = 'flex';
+        video.play();
+      }
+
+      function closeVideoModal() {
+        video.pause();
+        video.currentTime = 0;
+        video.src = '';
+        modal.style.display = 'none';
+      }
+
+      // Close modal on close button click
+      closeBtn.addEventListener('click', closeVideoModal);
+
+      // Close modal if clicking outside video
+      modal.addEventListener('click', function (e) {
+        if (e.target === modal) {
+          closeVideoModal();
+        }
+      });
+
+      // Expose openVideoModal globally so inline onclick can access it
+      window.openVideoModal = openVideoModal;
+
+
+      // AUDIO MODAL CODE
+      const audioModal = document.getElementById('audioModal');
+      const audioPlayer = document.getElementById('audioPlayer');
+      const closeAudioBtn = document.getElementById('closeAudioBtn');
+
+      window.openAudioModal = function (audioSrc) {
+        audioPlayer.src = audioSrc;
+        audioModal.style.display = 'flex';
+        audioPlayer.play();
+      };
+
+      function closeAudioModal() {
+        audioPlayer.pause();
+        audioPlayer.currentTime = 0;
+        audioPlayer.src = '';
+        audioModal.style.display = 'none';
+      }
+
+      closeAudioBtn.addEventListener('click', closeAudioModal);
+
+      audioModal.addEventListener('click', function (e) {
+        if (e.target === audioModal) {
+          closeAudioModal();
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>

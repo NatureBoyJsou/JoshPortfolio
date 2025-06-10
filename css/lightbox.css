@@ -51,7 +51,9 @@
     }
     .gallery-item:hover video {
       transform: scale(1.05);
+      opacity: 1;
     }
+    
     .overlay {
       position: absolute;
       inset: 0; /* shorthand for top:0; right:0; bottom:0; left:0; */

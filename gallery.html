@@ -27,6 +27,7 @@
   <link href="//fonts.googleapis.com/css?family=Arimo" rel="stylesheet" />
 
   <style>
+    
     .gallery-grids figcaption h3 {
       color: #fff;
       text-shadow: 0 0 5px #fff, 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
@@ -75,6 +76,8 @@
       font-size: 16px;
       cursor: pointer;
     }
+   
+
   </style>
 </head>
 <body>
@@ -140,26 +143,36 @@
 
           </figure>
 
-          <figure class="effect-marley gap-gap">
-            <video class="img-fluid" autoplay muted loop playsinline>
-              <source src="images/Pathfinding.mp4" type="video/mp4" />
-            </video>
-            <figcaption>
-              <h3>MilitarySimulation<span>Projects</span></h3>
-              <p>Comparison 2D Project Built in Unity Using C# & A* Pathfinding Algorithms</p>
-              <a href="videos/g7.mp4" class="gallery-box" data-lightbox="example-set"></a>
-            </figcaption>
-          </figure>
+         <figure class="effect-marley gap-gap">
+  <video class="img-fluid" autoplay muted loop playsinline>
+    <source src="images/Pathfinding.mp4" type="video/mp4" />
+  </video>
+  <figcaption>
+    <h3>MilitarySimulation<span>Projects</span></h3>
+    <p>Comparison 2D Project Built in Unity Using C# & A* Pathfinding Algorithms</p>
+    <a href="#" onclick="openVideoModal('images/Pathfinding.mp4'); return false;" style="cursor:pointer;">
+      Watch Project Video
+    </a>
+  </figcaption>
+</figure>
+
 
           <figure class="effect-marley gap-gap">
             <video class="img-fluid" autoplay muted loop playsinline>
               <source src="images/DracoTerminal.mp4" type="video/mp4" />
             </video>
-            <figcaption>
-              <h3>FindAlex<span>ARG</span></h3>
-              <p>Lead Programmer for Find Alex, An Alternate Reality Online Mystery Game Created Using React, Tailwind and HTML</p>
-              <a href="videos/g8.mp4" class="gallery-box" data-lightbox="example-set"></a>
-            </figcaption>
+       <figcaption>
+  <h3>FindAlex<span>ARG</span></h3>
+  <p>Lead Programmer for Find Alex, An Alternate Reality Online Mystery Game Created Using React, Tailwind and HTML</p>
+  <a href="https://findalex.netlify.app/" target="_blank" rel="noopener noreferrer">Visit FindAlex Website</a>
+     
+  </a>
+</figcaption>
+
+
+               
+
+
           </figure>
         </div>
 
@@ -189,25 +202,31 @@
           </figure>
 
           <figure class="effect-marley gap-gap">
-            <video class="img-fluid" autoplay muted loop playsinline>
-              <source src="images/SchwarzwaldPromo.mp4" type="video/mp4" />
-            </video>
-            <figcaption>
-              <h3>Fortress Of<span>Schwarzwald</span></h3>
-              <p>An Upcoming 3D Tabletop RPG Coded in Unreal Engine 5 Using Blueprints</p>
-              <a href="videos/g9.mp4" class="gallery-box" data-lightbox="example-set"></a>
-            </figcaption>
-          </figure>
+  <video class="img-fluid" autoplay muted loop playsinline>
+    <source src="images/SchwarzwaldPromo.mp4" type="video/mp4" />
+  </video>
+  <figcaption>
+    <h3>Fortress Of<span>Schwarzwald</span></h3>
+    <p>An Upcoming 3D Tabletop RPG Coded in Unreal Engine 5 Using Blueprints</p>
+    <a href="images/SchwarzwaldPromo.mp4" onclick="openVideoModal('images/SchwarzwaldPromo.mp4'); return false;" style="cursor:pointer;">
+      Watch Promo Video
+    </a>
+  </figcaption>
+</figure>
+
 
           <figure class="effect-marley gap-gap">
             <video class="img-fluid" autoplay muted loop playsinline>
               <source src="images/App.mp4" type="video/mp4" />
             </video>
             <figcaption>
-              <h3>Protein Intake<span>Calculator</span></h3>
-              <p>A Fitness Tracking Mobile Application Created Using MS Power Apps</p>
-              <a href="videos/g10.mp4" class="gallery-box" data-lightbox="example-set"></a>
-            </figcaption>
+  <h3>Protein Intake<span>Calculator</span></h3>
+  <p>A Fitness Tracking Mobile Application Created Using MS Power Apps</p>
+  <a href="#" onclick="openVideoModal('images/App.mp4'); return false;" style="cursor:pointer;">
+    Watch Project Video
+  </a>
+</figcaption>
+
           </figure>
         </div>
 
@@ -230,7 +249,7 @@
       </a>
     </li>
     <li>
-      <a href="images/resume.pdf" download title="Download My Resume">
+      <a href="images/Joshua Sourbeer Resume & Portfolio.pdf" download title="Download My Resume">
         <span class="fas fa-file"></span>
       </a>
     </li>
@@ -264,10 +283,9 @@
   <script src="js/jquery-2.2.3.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/lightbox-plus-jquery.min.js"></script>
-  <script src="js/move-top.js"></script>
-  <script src="js/easing.js"></script>
-  <script src="js/nav.js"></script>
-  <script src="js/SmoothScroll.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+ 
+
    <script>
     document.addEventListener('DOMContentLoaded', function () {
       const trigger = document.getElementById('trigger-overlay');

@@ -97,6 +97,99 @@
         justify-content: center;
       }
     }
+    .findalex-row {
+      position: relative;
+      overflow: visible;
+    }
+    .findalex-doc-link {
+      position: absolute;
+      top: 12px;
+      left: calc(100% + 12px);
+      white-space: nowrap;
+    }
+    .findalex-doc-link a {
+      color: #000000;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-shadow:
+        0 0 5px #fff,
+        0 0 10px #0ff,
+        0 0 20px #0ff,
+        0 0 30px #0ff;
+    }
+    @media (max-width: 767px) {
+      .findalex-doc-link {
+      position: absolute;
+      top: 12px;
+      left: calc(100% + 12px);
+      white-space: nowrap;
+    }
+    }
+    .military-row {
+      position: relative;
+      overflow: visible;
+    }
+    .military-doc-link {
+      position: absolute;
+      top: 12px;
+      right: calc(100% + 12px);
+      white-space: nowrap;
+    }
+    .military-doc-link a {
+      color: #000000;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-shadow:
+        0 0 5px #fff,
+        0 0 10px #0ff,
+        0 0 20px #0ff,
+        0 0 30px #0ff;
+    }
+    @media (max-width: 767px) {
+      .military-doc-link {
+        position: static;
+        margin-top: 12px;
+        display: flex;
+        justify-content: center;
+      }
+    }
+    .coderouge-row {
+      position: relative;
+      overflow: visible;
+    }
+    .coderouge-doc-link {
+      position: absolute;
+      top: 12px;
+      right: calc(100% + 12px);
+      white-space: nowrap;
+    }
+    .coderouge-doc-link a {
+      color: #000000;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-shadow:
+        0 0 5px #fff,
+        0 0 10px #0ff,
+        0 0 20px #0ff,
+        0 0 30px #0ff;
+    }
+    @media (max-width: 767px) {
+      .coderouge-doc-link {
+        position: static;
+        margin-top: 12px;
+        display: flex;
+        justify-content: center;
+      }
+    }
     .packsim-row {
       position: relative;
       overflow: visible;
@@ -132,6 +225,46 @@
       position: absolute;
       inset: 0;
       z-index: 4;
+    }
+    .tabletop-row {
+      position: relative;
+      overflow: visible;
+    }
+    .tabletop-doc-link {
+      position: absolute;
+      top: 12px;
+      left: calc(100% + 12px);
+      white-space: nowrap;
+    }
+    .tabletop-doc-link a {
+      color: #000000;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-shadow:
+        0 0 5px #fff,
+        0 0 10px #0ff,
+        0 0 20px #0ff,
+        0 0 30px #0ff;
+    }
+    @media (max-width: 767px) {
+      .tabletop-doc-link {
+        position: static;
+        margin-top: 12px;
+        display: flex;
+        justify-content: center;
+      }
+    }
+    .coderouge-link {
+      position: absolute;
+      inset: 0;
+      z-index: 4;
+    }
+    .coderouge-link:focus {
+      outline: 2px solid #0ff;
+      outline-offset: 2px;
     }
     .tabletop-link {
       position: absolute;
@@ -179,31 +312,34 @@
         margin-top: 12px;
         align-items: center;
       }
-    }}
-}
+    }
 
-    /\* Glow effect on both icon and text \*/
-.threat-summary-link a {
-  color: #000000;
-  font-weight: bold;
-  text-decoration: none;
-  text-shadow:
-    0 0 5px #fff,
-    0 0 10px #0ff,
-    0 0 20px #0ff,
-    0 0 30px #0ff;
-}
+
+    /* Glow effect on both icon and text */
+ .threat-summary-link a {
+      color: #000000;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-shadow:
+        0 0 5px #fff,
+        0 0 10px #0ff,
+        0 0 20px #0ff,
+        0 0 30px #0ff;
+    }
 
 /* PDF icon glow */
 .threat-summary-link i {
-  font-size: 1.8rem;
-  color: #fff;
-  text-shadow:
-    0 0 5px #fff,
-    0 0 10px #0ff,
-    0 0 20px #0ff,
-    0 0 30px #0ff;
-}
+      font-size: 1.2rem;
+      color: #000000;
+      text-shadow:
+        0 0 5px #fff,
+        0 0 10px #0ff,
+        0 0 20px #0ff,
+        0 0 30px #0ff;
+    }
 
 
 
@@ -230,6 +366,7 @@
               <li><a href="about.html" class="active">Biography</a></li>
               <li><a href="history.html">Coursework</a></li>
               <li><a href="gallery.html">Projects</a></li>
+              <li><a href="experience.html">Experience, Service, Philosophy</a></li>
               <li><a href="contact.html">Curriculum Vitae</a></li>
             </ul>
           </nav>
@@ -243,7 +380,7 @@
   <!-- Projects Section -->
   <section class="gallery-design py-lg-4 py-md-3 py-sm-3 py-3">
     <div class="container py-lg-5 py-md-5 py-sm-4 py-4">
-      <h3 class="title text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3" style="font-family: 'Cinzel Decorative', cursive;">Projects</h3>
+      <h3 class="title text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3" style="font-family: 'Cinzel Decorative', cursive;">Simulation Artifacts & Projects</h3>
 
       <div class="row grid gallery-info">
 
@@ -254,7 +391,7 @@
               <a href="images/Pack_Sim__A_Packet_Capture_Simulation_Tool.pdf" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> PackSim Draft Paper</a>
             </div>
             <figure class="effect-marley gap-gap" style="position: relative; cursor: pointer;">
-              <video class="img-fluid" autoplay muted loop playsinline style="filter: brightness(0.6);">
+              <video class="img-fluid" autoplay muted loop playsinline style="filter: brightness(0.7);">
                 <source src="images/PackSim720.mp4" type="video/mp4" aria-label="PackSim desktop demo video"/>
               </video>
               <a class="packsim-link" href="https://github.com/NatureBoyJsou/PackSim" target="_blank" rel="noopener noreferrer" aria-label="Open PackSim project on GitHub"></a>
@@ -270,88 +407,52 @@
               <a href="images/AnyLogicSimulationPaper.pdf" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> AnyLogic Simulation Paper</a>
             </div>
             <figure class="effect-marley gap-gap">
-              <video class="img-fluid" style="filter: brightness(0.6);" autoplay muted loop playsinline>
+              <video class="img-fluid" style="filter: brightness(0.7);" autoplay muted loop playsinline>
                 <source src="images/AnyLogicModelFinalVideo.mp4" type="video/mp4" aria-label="AnyLogic Theme Park Queuing Simulation Model video"/>
               </video>
               <figcaption>
-                <h3>AnyLogic Theme Park Queuing Simulation Model<span></span></h3>`r`n              <p>An AnyLogic Queing Simulation Model of Walt Disney World's The Haunted Mansion</p>
+                <h3>AnyLogic Theme Park Queuing Simulation Model<span></span></h3>
+              <p>An AnyLogic Queing Simulation Model of Walt Disney World's The Haunted Mansion</p>
               </figcaption>
             </figure>
           </div>
-
-          <figure class="effect-marley gap-gap">
-            <video class="img-fluid" style="filter: brightness(0.6);" autoplay muted loop playsinline>
-              <source src="images/Sailing.mp4" type="video/webm" aria-label="Video Promo of Ship on Water From Game Scene"/>
-            </video>
-      <figcaption>
-      <h3>Water Simulation<span>Projects</span></h3>
-       <p>Simulated Ocean Scene Created Unreal Engine 5 Blueprints for an Online Tutorial Course. Completed 1/5/2022.</p>
-     <a href="images/Sailing.mp4" onclick="openVideoModal('images/Sailing.mp4'); return false;">Watch Video</a>
-    </figcaption>
-
-          </figure>
-
-         <figure class="effect-marley gap-gap">
-  <video class="img-fluid" style="filter: brightness(0.6);" autoplay muted loop playsinline>
-    <source src="images/Pathfinding.mp4" type="video/mp4" aria-label="Video Promo of Military Simulation Project"/>
-  </video>
-  <figcaption>
-    <h3>Military Simulation<span>Projects</span></h3>
-    <p>2D Simulation Project Built in Unity Using C# & A* Pathfinding Algorithms for IDS6147. </a><br>Completed 10/24/2024. </p>
-    <a href="#" onclick="openVideoModal('images/Pathfinding.mp4'); return false;" style="cursor:pointer;">
-      Watch Project Video
-    </a>
-  </figcaption>
-</figure>
-
-
-          <figure class="effect-marley gap-gap">
-            <video class="img-fluid" style="filter: brightness(0.6);" autoplay muted loop playsinline>
-              <source src="images/DracoTerminal.mp4" type="video/mp4" aria-label="Video Promo for Find Alex Cybersecurity Game"/>
-            </video>
-       <figcaption>
-  <h3>FindAlex<span>ARG</span></h3>
-  <p>Lead Programmer for Find Alex, An Alternate Reality Online Mystery Game Created Using React, Tailwind and HTML for DIG6136. </a><br>Completed 4/8/2025.</p>
-  <a href="https://findalex.netlify.app/" target="_blank" rel="noopener noreferrer">Visit FindAlex Website</a>
-     
-  </a>
-</figcaption>
-          </figure>
-
-        </div>
-
-        <!-- Column 2 -->
-        <div class="col-lg-6 col-md-6 col-sm-12 gallery-grids p-0">
-          <div class="threat-hunters-row">
+                    <div class="coderouge-row">
+            <div class="coderouge-doc-link">
+              <a href="images/CodeRougePitchDocument.pdf" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> Code Rouge Pitch Document</a>
+            </div>
+            <figure class="effect-marley gap-gap" style="position: relative; cursor: pointer;">
+              <video class="img-fluid" style="filter: brightness(0.7);" autoplay muted loop playsinline>
+                <source src="images/CodeRouge.mp4" type="video/mp4" aria-label="Code Rouge demo video"/>
+              </video>
+              <a class="coderouge-link" href="https://zsb-labs.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Open Code Rouge"></a>
+              <figcaption>
+                <h3>Code Rouge<span></span></h3>
+                <p>An Educational, Language Learning Mobile Translation and Comprehension Game, Created for EME 6614.</p>
+                <a href="images/CodeRouge.mp4" onclick="openVideoModal('images/CodeRouge.mp4'); return false;">Watch Video</a>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="military-row">
+            <div class="military-doc-link">
+              <a href="images/MilitaryLowOverheadSimImprovments.pdf" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> Military Low Overhead Sim Improvements</a>
+            </div>
             <figure class="effect-marley gap-gap">
-              <video class="img-fluid" style="filter: brightness(0.6);" autoplay muted loop playsinline>
-                <source src="images/InGameFootage.mp4" type="video/mp4" aria-label="Burger Cooking Tutorial Vido Promo"/>
+              <video class="img-fluid" style="filter: brightness(0.7);" autoplay muted loop playsinline>
+                <source src="images/Pathfinding.mp4" type="video/mp4" aria-label="Video Promo of Military Simulation Project"/>
               </video>
               <figcaption>
-                <h3>Threat Hunters<span></span></h3>
-                <p>A DOD Focused Cybersecurity Training Simulation. Beta Currently Under DOD Review.</p>
-                <a href="#" onclick="openVideoModal('images/ThreatHuntersPrototypeVideo480p.mp4'); return false;">Watch Video</a>
+                <h3>Military Simulation<span>Projects</span></h3>
+                <p>2D Simulation Project Built in Unity Using C# & A* Pathfinding Algorithms for IDS6147. </a><br>Completed 10/24/2024. </p>
+                <a href="#" onclick="openVideoModal('images/Pathfinding.mp4'); return false;" style="cursor:pointer;">
+                  Watch Project Video
+                </a>
               </figcaption>
             </figure>
-            <div class="threat-summary-link">
-              <a href="images/Threat Hunters Game Summary.pdf" target="_blank" rel="noopener noreferrer">
-                <i class="fas fa-file-pdf"></i> Threat Hunters Summary
-              </a>
-            </div>
           </div>
 
-                    <figure class="effect-marley gap-gap" style="position: relative; cursor: pointer;">
-            <video class="img-fluid" style="filter: brightness(0.6);" autoplay muted loop playsinline>
-              <source src="images/TabletopSim720.mp4" type="video/mp4" aria-label="Video demo of P5JS Tabletop Network Simulator"/>
-            </video>
-            <a class="tabletop-link" href="https://editor.p5js.org/NatureBoyJsou/full/XoiX3UpYd" target="_blank" rel="noopener noreferrer" aria-label="Open P5JS Tabletop Network Simulator"></a>
-            <figcaption>
-              <h3>P5JS Tabletop Network Simulator<span></span></h3>`r`n              <p>A Hardware-Software Educational, Threat-Centric P5JS Network Simulation Project </p>
-            </figcaption>
-          </figure>
 
           <figure class="effect-marley gap-gap">
-            <video class="img-fluid" style="filter: brightness(0.6);" autoplay muted loop playsinline>
+            <video class="img-fluid" style="filter: brightness(0.7);" autoplay muted loop playsinline>
               <source src="images/SavorPromo.mp4" type="video/mp4" aria-label="Video Promo for Savor Recipe Website"/>
             </video>
             <figcaption>
@@ -361,8 +462,61 @@
             </figcaption>
           </figure>
 
+        </div>
+
+        <!-- Column 2 -->
+        <div class="col-lg-6 col-md-6 col-sm-12 gallery-grids p-0">
+          <div class="threat-hunters-row">
+            <figure class="effect-marley gap-gap">
+              <video class="img-fluid" style="filter: brightness(0.7);" autoplay muted loop playsinline>
+                <source src="images/InGameFootage.mp4" type="video/mp4" aria-label="Burger Cooking Tutorial Vido Promo"/>
+              </video>
+              <figcaption>
+                <h3>Threat Hunters<span></span></h3>
+                <p>A DOD Focused Cybersecurity Training Simulation. Beta Currently Under DOD Review.</p>
+                <a href="#" onclick="openVideoModal('images/ThreatHuntersPrototypeVideo480p.mp4'); return false;">Watch Video</a>
+              </figcaption>
+            </figure>
+            <div class="threat-summary-link">
+              <a href="images/Threat Hunters Game Summary.pdf" target="_blank" rel="noopener noreferrer" >
+                <i class="fas fa-file-pdf" ></i> Threat Hunters Summary
+              </a>
+            </div>
+          </div>
+          <div class="tabletop-row">
+            <figure class="effect-marley gap-gap" style="position: relative; cursor: pointer;">
+              <video class="img-fluid" style="filter: brightness(0.7);" autoplay muted loop playsinline>
+                <source src="images/TabletopSim720.mp4" type="video/mp4" aria-label="Video demo of P5JS Tabletop Network Simulator"/>
+              </video>
+              <a class="tabletop-link" href="https://editor.p5js.org/NatureBoyJsou/full/XoiX3UpYd" target="_blank" rel="noopener noreferrer" aria-label="Open P5JS Tabletop Network Simulator"></a>
+              <figcaption>
+                <h3>P5JS Tabletop Network Simulator<span></span></h3>
+                <p>A Hardware-Software Educational, Threat-Centric P5JS Network Simulation Project </p>
+              </figcaption>
+            </figure>
+            <div class="tabletop-doc-link">
+              <a href="images/TabletopNetworkSimulatorRelatedWorks.pdf" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> Tabletop Simulator Related Works</a>
+            </div>
+          </div>
+
+          <div class="findalex-row">
+            <figure class="effect-marley gap-gap">
+              <video class="img-fluid" style="filter: brightness(0.7);" autoplay muted loop playsinline>
+                <source src="images/DracoTerminal.mp4" type="video/mp4" aria-label="Video Promo for Find Alex Cybersecurity Game"/>
+              </video>
+              <figcaption>
+                <h3>FindAlex<span>ARG</span></h3>
+                <p>Lead Programmer for Find Alex, An Alternate Reality Online Mystery Game Created Using React, Tailwind and HTML for DIG6136. </a><br>Completed 4/8/2025.</p>
+                <a href="https://findalex.netlify.app/" target="_blank" rel="noopener noreferrer">Visit FindAlex Website</a>
+              </figcaption>
+            </figure>
+            <div class="findalex-doc-link">
+              <a href="images/Find_Alex_Mechanics_Final_Paper.pdf" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> Find Alex Mechanics Final Paper</a>
+            </div>
+          </div>
+
           <figure class="effect-marley gap-gap">
-            <video class="img-fluid" style="filter: brightness(0.6);" autoplay muted loop playsinline>
+            <video class="img-fluid" style="filter: brightness(0.7);" autoplay muted loop playsinline>
               <source src="images/SchwarzwaldPromo.mp4" type="video/mp4" />
             </video>
             <figcaption>
@@ -375,7 +529,7 @@
           </figure>
 
           <figure class="effect-marley gap-gap">
-            <video class="img-fluid" style="filter: brightness(0.6);" autoplay muted loop playsinline>
+            <video class="img-fluid" style="filter: brightness(0.7);" autoplay muted loop playsinline>
               <source src="images/App.mp4" type="video/mp4" />
             </video>
             <figcaption>
@@ -539,6 +693,52 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

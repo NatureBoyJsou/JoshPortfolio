@@ -97,17 +97,92 @@
         justify-content: center;
       }
     }
+    .packsim-row {
+      position: relative;
+      overflow: visible;
+    }
+    .packsim-doc-link {
+      position: absolute;
+      top: 12px;
+      right: calc(100% + 12px);
+      white-space: nowrap;
+    }
+    .packsim-doc-link a {
+      color: #000000;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-shadow:
+        0 0 5px #fff,
+        0 0 10px #0ff,
+        0 0 20px #0ff,
+        0 0 30px #0ff;
+    }
+    @media (max-width: 767px) {
+      .packsim-doc-link {
+        position: static;
+        margin-top: 12px;
+        display: flex;
+        justify-content: center;
+      }
+    }
     .packsim-link {
       position: absolute;
       inset: 0;
       z-index: 4;
     }
-    .packsim-link:focus {
+    .tabletop-link {
+      position: absolute;
+      inset: 0;
+      z-index: 4;
+    }
+    .tabletop-link:focus {
       outline: 2px solid #0ff;
       outline-offset: 2px;
     }
 
-    /* Glow effect on both icon and text */
+    .packsim-link:focus {
+      outline: 2px solid #0ff;
+      outline-offset: 2px;
+    }
+    .anylogic-row {
+      position: relative;
+      overflow: visible;
+    }
+    .anylogic-links {
+      position: absolute;
+      top: 12px;
+      right: calc(100% + 12px);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      white-space: nowrap;
+    }
+    .anylogic-links a {
+      color: #000000;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-shadow:
+        0 0 5px #fff,
+        0 0 10px #0ff,
+        0 0 20px #0ff,
+        0 0 30px #0ff;
+    }
+    @media (max-width: 767px) {
+      .anylogic-links {
+        position: static;
+        margin-top: 12px;
+        align-items: center;
+      }
+    }}
+}
+
+    /\* Glow effect on both icon and text \*/
 .threat-summary-link a {
   color: #000000;
   font-weight: bold;
@@ -174,29 +249,38 @@
 
         <!-- Column 1 -->
         <div class="col-lg-6 col-md-6 col-sm-12 gallery-grids p-0">
-          <figure class="effect-marley gap-gap" style="position: relative; cursor: pointer;">
-            <video class="img-fluid" autoplay muted loop playsinline style="filter: brightness(0.6);">
-              <source src="images/PackSimDesktop.mp4" type="video/mp4" aria-label="PackSim desktop demo video"/>
-            </video>
-            <a class="packsim-link" href="https://github.com/NatureBoyJsou/PackSim" target="_blank" rel="noopener noreferrer" aria-label="Open PackSim project on GitHub"></a>
-            <figcaption>
-              <h3>PackSim<span></span></h3>
-              <p>A Python-based Network simulation tool for modeling Risk Management Strategies</p>
-            </figcaption>
-          </figure>
-          <figure class="effect-marley gap-gap">
-            <video class="img-fluid" autoplay muted loop playsinline>
-              <source src="images/SavorPromo.mp4" type="video/mp4" aria-label="Video Promo for Savor Recipe Website"/>
-            </video>
-            <figcaption>
-              <h3>Savor<span>Website</span></h3>
-              <p>A Website Collection of Recipes and Cooking Resources, React JSX & CSS for EME6507. </a><br>Completed on 6/11/2024.</p>
-              <a href="https://natureboyjsou.github.io/SavorRecipesTutorials/" target="_blank" rel="noopener noreferrer">Visit Site</a>
-            </figcaption>
-          </figure>
+                    <div class="packsim-row">
+            <div class="packsim-doc-link">
+              <a href="images/Pack_Sim__A_Packet_Capture_Simulation_Tool.pdf" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> PackSim Draft Paper</a>
+            </div>
+            <figure class="effect-marley gap-gap" style="position: relative; cursor: pointer;">
+              <video class="img-fluid" autoplay muted loop playsinline style="filter: brightness(0.6);">
+                <source src="images/PackSim720.mp4" type="video/mp4" aria-label="PackSim desktop demo video"/>
+              </video>
+              <a class="packsim-link" href="https://github.com/NatureBoyJsou/PackSim" target="_blank" rel="noopener noreferrer" aria-label="Open PackSim project on GitHub"></a>
+              <figcaption>
+                <h3>PackSim<span></span></h3>
+                <p>A Python-based Network simulation tool for modeling Risk Management Strategies</p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="anylogic-row">
+            <div class="anylogic-links">
+              <a href="images/AnyLogicPresentation.pdf" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> AnyLogic Presentation</a>
+              <a href="images/AnyLogicSimulationPaper.pdf" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> AnyLogic Simulation Paper</a>
+            </div>
+            <figure class="effect-marley gap-gap">
+              <video class="img-fluid" style="filter: brightness(0.6);" autoplay muted loop playsinline>
+                <source src="images/AnyLogicModelFinalVideo.mp4" type="video/mp4" aria-label="AnyLogic Theme Park Queuing Simulation Model video"/>
+              </video>
+              <figcaption>
+                <h3>AnyLogic Theme Park Queuing Simulation Model<span></span></h3>`r`n              <p>An AnyLogic Queing Simulation Model of Walt Disney World's The Haunted Mansion</p>
+              </figcaption>
+            </figure>
+          </div>
 
           <figure class="effect-marley gap-gap">
-            <video class="img-fluid" autoplay muted loop playsinline>
+            <video class="img-fluid" style="filter: brightness(0.6);" autoplay muted loop playsinline>
               <source src="images/Sailing.mp4" type="video/webm" aria-label="Video Promo of Ship on Water From Game Scene"/>
             </video>
       <figcaption>
@@ -208,7 +292,7 @@
           </figure>
 
          <figure class="effect-marley gap-gap">
-  <video class="img-fluid" autoplay muted loop playsinline>
+  <video class="img-fluid" style="filter: brightness(0.6);" autoplay muted loop playsinline>
     <source src="images/Pathfinding.mp4" type="video/mp4" aria-label="Video Promo of Military Simulation Project"/>
   </video>
   <figcaption>
@@ -222,7 +306,7 @@
 
 
           <figure class="effect-marley gap-gap">
-            <video class="img-fluid" autoplay muted loop playsinline>
+            <video class="img-fluid" style="filter: brightness(0.6);" autoplay muted loop playsinline>
               <source src="images/DracoTerminal.mp4" type="video/mp4" aria-label="Video Promo for Find Alex Cybersecurity Game"/>
             </video>
        <figcaption>
@@ -232,19 +316,15 @@
      
   </a>
 </figcaption>
-
-
-               
-
-
           </figure>
+
         </div>
 
         <!-- Column 2 -->
         <div class="col-lg-6 col-md-6 col-sm-12 gallery-grids p-0">
-                    <div class="threat-hunters-row">
+          <div class="threat-hunters-row">
             <figure class="effect-marley gap-gap">
-              <video class="img-fluid" autoplay muted loop playsinline>
+              <video class="img-fluid" style="filter: brightness(0.6);" autoplay muted loop playsinline>
                 <source src="images/InGameFootage.mp4" type="video/mp4" aria-label="Burger Cooking Tutorial Vido Promo"/>
               </video>
               <figcaption>
@@ -260,44 +340,51 @@
             </div>
           </div>
 
-          <figure class="effect-marley gap-gap">
-            <video class="img-fluid" autoplay muted loop playsinline>
-              <source src="images/AudioProject.mp4" type="video/mp4" aria-label="Audio Tutorial Project on Cooking Pasta"/>
+                    <figure class="effect-marley gap-gap" style="position: relative; cursor: pointer;">
+            <video class="img-fluid" style="filter: brightness(0.6);" autoplay muted loop playsinline>
+              <source src="images/TabletopSim720.mp4" type="video/mp4" aria-label="Video demo of P5JS Tabletop Network Simulator"/>
             </video>
+            <a class="tabletop-link" href="https://editor.p5js.org/NatureBoyJsou/full/XoiX3UpYd" target="_blank" rel="noopener noreferrer" aria-label="Open P5JS Tabletop Network Simulator"></a>
             <figcaption>
-              <h3>Pasta Cooking<span>Tutorial</span></h3>
-              <p>An Edited Audio Presentation Detailing How to Make Home Made Pasta for EME6507. </a><br>Completed on 6/1/2025.</p>
-              <!-- Changed from video link to audio player trigger -->
-              <a href="#" onclick="openAudioModal('images/PastaTutorialAudio.mp3'); return false;">Play Audio</a>
+              <h3>P5JS Tabletop Network Simulator<span></span></h3>`r`n              <p>A Hardware-Software Educational, Threat-Centric P5JS Network Simulation Project </p>
             </figcaption>
           </figure>
 
           <figure class="effect-marley gap-gap">
-  <video class="img-fluid" autoplay muted loop playsinline>
-    <source src="images/SchwarzwaldPromo.mp4" type="video/mp4" />
-  </video>
-  <figcaption>
-    <h3>Fortress Of<span>Schwarzwald</span></h3>
-    <p>An Upcoming 3D Tabletop RPG Coded in Unreal Engine 5 Using Blueprints. </a><br>Coming to Steam in 2026.</p>
-    <a href="images/SchwarzwaldPromo.mp4" onclick="openVideoModal('images/SchwarzwaldPromo.mp4'); return false;" style="cursor:pointer;"aria-label="Video Promo for 3d Tabletop Game">
-      Watch Promo Video
-    </a>
-  </figcaption>
-</figure>
-
+            <video class="img-fluid" style="filter: brightness(0.6);" autoplay muted loop playsinline>
+              <source src="images/SavorPromo.mp4" type="video/mp4" aria-label="Video Promo for Savor Recipe Website"/>
+            </video>
+            <figcaption>
+              <h3>Savor<span>Website</span></h3>
+              <p>A Website Collection of Recipes and Cooking Resources, React JSX & CSS for EME6507. </a><br>Completed on 6/11/2024.</p>
+              <a href="https://natureboyjsou.github.io/SavorRecipesTutorials/" target="_blank" rel="noopener noreferrer">Visit Site</a>
+            </figcaption>
+          </figure>
 
           <figure class="effect-marley gap-gap">
-            <video class="img-fluid" autoplay muted loop playsinline>
+            <video class="img-fluid" style="filter: brightness(0.6);" autoplay muted loop playsinline>
+              <source src="images/SchwarzwaldPromo.mp4" type="video/mp4" />
+            </video>
+            <figcaption>
+              <h3>Fortress Of<span>Schwarzwald</span></h3>
+              <p>An Upcoming 3D Tabletop RPG Coded in Unreal Engine 5 Using Blueprints. </a><br>Coming to Steam in 2026.</p>
+              <a href="images/SchwarzwaldPromo.mp4" onclick="openVideoModal('images/SchwarzwaldPromo.mp4'); return false;" style="cursor:pointer;"aria-label="Video Promo for 3d Tabletop Game">
+                Watch Promo Video
+              </a>
+            </figcaption>
+          </figure>
+
+          <figure class="effect-marley gap-gap">
+            <video class="img-fluid" style="filter: brightness(0.6);" autoplay muted loop playsinline>
               <source src="images/App.mp4" type="video/mp4" />
             </video>
             <figcaption>
-  <h3>Protein Intake<span>Calculator</span></h3>
-  <p>A Fitness Tracking Mobile Application Created Using MS Power Apps. </a><br>Completed 4/11/2025.</p>
-  <a href="#" onclick="openVideoModal('images/App.mp4'); return false;" style="cursor:pointer;"aria-label="Mobile Application Demo Video">
-    Watch Project Video
-  </a>
-</figcaption>
-
+              <h3>Protein Intake<span>Calculator</span></h3>
+              <p>A Fitness Tracking Mobile Application Created Using MS Power Apps. </a><br>Completed 4/11/2025.</p>
+              <a href="#" onclick="openVideoModal('images/App.mp4'); return false;" style="cursor:pointer;"aria-label="Mobile Application Demo Video">
+                Watch Project Video
+              </a>
+            </figcaption>
           </figure>
         </div>
 
@@ -452,6 +539,34 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -76,17 +76,38 @@
       font-size: 16px;
       cursor: pointer;
     }
-   .threat-summary-link {
-  position: absolute;
-  right: -10px;
-  top: -50px; /* adjust height */
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 1.2rem;
-}
+    .threat-hunters-row {
+      position: relative;
+      overflow: visible;
+    }
+    .threat-summary-link {
+      position: absolute;
+      top: 12px;
+      left: calc(100% + 12px);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.1rem;
+      white-space: nowrap;
+    }
+    @media (max-width: 767px) {
+      .threat-summary-link {
+        position: static;
+        margin-top: 12px;
+        justify-content: center;
+      }
+    }
+    .packsim-link {
+      position: absolute;
+      inset: 0;
+      z-index: 4;
+    }
+    .packsim-link:focus {
+      outline: 2px solid #0ff;
+      outline-offset: 2px;
+    }
 
-/* Glow effect on both icon and text */
+    /* Glow effect on both icon and text */
 .threat-summary-link a {
   color: #000000;
   font-weight: bold;
@@ -153,6 +174,16 @@
 
         <!-- Column 1 -->
         <div class="col-lg-6 col-md-6 col-sm-12 gallery-grids p-0">
+          <figure class="effect-marley gap-gap" style="position: relative; cursor: pointer;">
+            <video class="img-fluid" autoplay muted loop playsinline style="filter: brightness(0.6);">
+              <source src="images/PackSimDesktop.mp4" type="video/mp4" aria-label="PackSim desktop demo video"/>
+            </video>
+            <a class="packsim-link" href="https://github.com/NatureBoyJsou/PackSim" target="_blank" rel="noopener noreferrer" aria-label="Open PackSim project on GitHub"></a>
+            <figcaption>
+              <h3>PackSim<span></span></h3>
+              <p>A Python-based Network simulation tool for modeling Risk Management Strategies</p>
+            </figcaption>
+          </figure>
           <figure class="effect-marley gap-gap">
             <video class="img-fluid" autoplay muted loop playsinline>
               <source src="images/SavorPromo.mp4" type="video/mp4" aria-label="Video Promo for Savor Recipe Website"/>
@@ -211,17 +242,23 @@
 
         <!-- Column 2 -->
         <div class="col-lg-6 col-md-6 col-sm-12 gallery-grids p-0">
-          <figure class="effect-marley gap-gap">
-            <video class="img-fluid" autoplay muted loop playsinline>
-              <source src="images/InGameFootage.mp4" type="video/mp4" aria-label="Burger Cooking Tutorial Vido Promo"/>
-            </video>
-            <figcaption>
-              <h3>Threat Hunters<span></span></h3>
-              <p>An Upcoming Third Person Mystery Game Created Using Unreal Engine. Releasing in January 2026.</p>
-              <a href="#" onclick="openVideoModal('images/ThreatHuntersPrototypeVideo480p.mp4'); return false;">Watch Video</a>
-            </figcaption>
-            
-          </figure>
+                    <div class="threat-hunters-row">
+            <figure class="effect-marley gap-gap">
+              <video class="img-fluid" autoplay muted loop playsinline>
+                <source src="images/InGameFootage.mp4" type="video/mp4" aria-label="Burger Cooking Tutorial Vido Promo"/>
+              </video>
+              <figcaption>
+                <h3>Threat Hunters<span></span></h3>
+                <p>A DOD Focused Cybersecurity Training Simulation. Beta Currently Under DOD Review.</p>
+                <a href="#" onclick="openVideoModal('images/ThreatHuntersPrototypeVideo480p.mp4'); return false;">Watch Video</a>
+              </figcaption>
+            </figure>
+            <div class="threat-summary-link">
+              <a href="images/Threat Hunters Game Summary.pdf" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-file-pdf"></i> Threat Hunters Summary
+              </a>
+            </div>
+          </div>
 
           <figure class="effect-marley gap-gap">
             <video class="img-fluid" autoplay muted loop playsinline>
@@ -234,11 +271,6 @@
               <a href="#" onclick="openAudioModal('images/PastaTutorialAudio.mp3'); return false;">Play Audio</a>
             </figcaption>
           </figure>
-          <div class="threat-summary-link">
-  <a href="images/Threat Hunters Game Summary.pdf" target="_blank" rel="noopener noreferrer">
-    <i class="fas fa-file-pdf"></i> Threat Hunters Summary
-  </a>
-</div>
 
           <figure class="effect-marley gap-gap">
   <video class="img-fluid" autoplay muted loop playsinline>
@@ -420,3 +452,14 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+

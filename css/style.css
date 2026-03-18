@@ -201,6 +201,8 @@ footer {
   width: 100%;
   min-height: calc(100vh - 120px);
   margin: auto;
+  position: relative;
+  z-index: 5;
 }
 
 .slide {
@@ -215,6 +217,7 @@ footer {
   -o-background-size: cover;
   -ms-background-size: cover;
   min-height: 700px; /* was 800px – reduced by 40px */
+  height: 100%;
 }
 
 
@@ -1461,3 +1464,4 @@ footer {
 }
 
 /*--//responsive--*/
+

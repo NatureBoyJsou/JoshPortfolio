@@ -31,11 +31,15 @@
         }
 
         layout() {
+            const inlineBg = this.DOM.el.style.backgroundImage;
+            const computedBg = window.getComputedStyle(this.DOM.el).backgroundImage;
+            const bgImage = inlineBg && inlineBg !== 'none' ? inlineBg : computedBg;
             this.DOM.el.classList.add('uncover');
 
-            const bgImage = this.DOM.el.style.backgroundImage;
             const orientation = this.options.orientation;
             const slicesTotal = this.options.slicesTotal;
+            const slicesColor = this.options.slicesColor || '#000';
+            const useSliceImage = slicesColor === 'transparent';
 
             let inner = `
                 <div class="uncover__img" style="background-image: ${bgImage};"></div>
@@ -50,7 +54,8 @@
 
                 inner += `
                     <div class="uncover__slice" style="
-                        background-image: ${bgImage};
+                        color: ${slicesColor};
+                        ${useSliceImage ? `background-image: ${bgImage};` : 'background-image: none;'}
                         background-position: ${backgroundPosition};
                         background-size: cover;
                         background-repeat: no-repeat;
